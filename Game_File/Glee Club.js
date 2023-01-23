@@ -897,10 +897,17 @@ function Kids_moves(){
 			is_order_changed = true;
 			order++;
 		}
+
 	}
-		
+	
+	if(K3_Start[order - 1] + 25 <= frame && frame <= K3_Stop[order - 1] + 25){
+		if(!is_Input_Start){
+			Wrong();
+		}
+	}
+
 	if(frame >= K3_Stop[order - 1] + 25){
-		if(is_Input_Start == false || is_Input_Stop == false){
+		if(!is_Input_Start || !is_Input_Stop){
 			Wrong();
 		}
 
@@ -1037,7 +1044,9 @@ function K1_State(){
 	}
 	
 	if(K1S == "Just"){
-		K1_Wrong = false;
+		if(K1P == 0 || K1P == 1){
+			K1_Wrong = false;
+		}
 		
 		if(K1P == 0){
 			K1P = 1;
@@ -1059,7 +1068,9 @@ function K1_State(){
 	}
 	
 	if(K1S == "Super"){
-		K1_Wrong = false;
+		if(K1P == 0 || K1P == 1){
+			K1_Wrong = false;
+		}
 		
 		if(K1P == 0){
 			K1P = 1;
@@ -1083,7 +1094,9 @@ function K1_State(){
 	}
 
 	if(K1S == "Super_Ready"){
-		K1_Wrong = false;
+		if(K1P <= 12){
+			K1_Wrong = false;
+		}
 		
 		if(K1P <= 12 || K1P == 15){
 			K1P = 13;
@@ -1121,7 +1134,9 @@ function K2_State(){
 	}
 	
 	if(K2S == "Just"){
-		K2_Wrong = false;
+		if(K2P == 0 || K2P == 1){
+			K2_Wrong = false;
+		}
 		
 		if(K2P == 0){
 			K2P = 1;
@@ -1143,7 +1158,9 @@ function K2_State(){
 	}
 	
 	if(K2S == "Super"){
-		K2_Wrong = false;
+		if(K2P == 0 || K2P == 1){
+			K2_Wrong = false;
+		}
 		
 		if(K2P == 0){
 			K2P = 1;
@@ -1167,7 +1184,9 @@ function K2_State(){
 	}
 	
 	if(K2S == "Super_Ready"){
-		K2_Wrong = false;
+		if(K2P <= 12){
+			K2_Wrong = false;
+		}
 		
 		if(K2P <= 12 || K2P == 15){
 			K2P = 13;
@@ -1470,6 +1489,14 @@ function render() {
 	}
 
 	if(TXT){
+		if(K3_Start[order - 1] - 25 <= frame && frame <= K3_Start[order - 1] + 25){
+			ctx.drawImage(P1, 0, 0);
+		}
+	
+		if(K3_Stop[order - 1] - 25 <= frame && frame <= K3_Stop[order - 1] + 25){
+			ctx.drawImage(PX, 50, 0);
+		}
+		
 		ctx.fillStyle = "black";
 		ctx.font = "32px RH";
 		ctx.fillText(`order : ${order}`, 10, 50);
