@@ -112,6 +112,10 @@ let K3_Sound = ["Bp", "Bp", "Super", "Bp", "Bp", "Ep", "Super", "Bp", "Bp", "Bp"
 let RK3_Start = [845, 1310, 1385, 1780, 2240, 2590, 2780, 3180, 3225, 3635, 4090, 4170, 4560, 5025, 5335];
 let RK3_Stop = [875, 1340, 1415, 1805, 2270, 2710, 2820, 3195, 3255, 3720, 4115, 4200, 4645, 5110, 5345];
 
+let fps = 60, interval = 1000 / fps,                // /
+    now, then = Date.now(), savedTime = Date.now(), // | FPS Checker
+    delta, conter = 0;                              // \
+
 function loadAudio(){
 	In_Game_Music = new Audio();
     In_Game_Music.src = "audios/In_Game_Music.mp3";
@@ -1886,4 +1890,18 @@ function main(){
 loadAudio();
 loadImage();
 setKeyboardListener();
-main();
+
+function runCodeWithFPS () {      
+    requestAnimationFrame(runCodeWithFPS);
+    
+    now = Date.now();
+    delta = now - then;
+    
+    if (delta > interval) {
+        then  =  now  -  ( delta  %  interval ) ;
+
+        main();
+    }
+}
+
+runCodeWithFPS();
