@@ -439,11 +439,13 @@ function update() {
 	}
 
 	last_frame = frame;
-	frame = parseInt(In_Game_Music.currentTime * 80);
+	frame = parseInt(In_Game_Music.currentTime * 60);
 	
 	if(last_frame + 1 < frame){
-		frame--;
+		frame = last_frame + 1;
 	}
+
+    In_Game_Music.currentTime = frame / 60;
 
 	//if(frame != in_frame[in_frame.length - 1]){
 	//	if(frame - 1 != in_frame[in_frame.length - 1]){
