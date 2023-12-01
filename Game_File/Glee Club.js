@@ -439,7 +439,7 @@ function update() {
 	}
 
 	last_frame = frame;
-	frame = parseInt(In_Game_Music.currentTime * 60);
+	frame = parseInt(In_Game_Music.currentTime * 80);
 	
 	if(last_frame + 1 < frame){
 		frame--;
@@ -1883,8 +1883,6 @@ function main(){
 			}
 		}
 	}
-	
-	requestAnimationFrame(main);
 }
 
 loadAudio();
