@@ -1295,9 +1295,7 @@ function main(){
 						save_frame = 0;
 					}
 				}else{
-					
 					ctx.drawImage(Non, 228, 339);
-
 					
 					if(Start_Show_Score){
 						Score_wait++;
@@ -1569,7 +1567,7 @@ loadAudio();
 loadImage();
 setKeyboardListener();
 
-function runCodeWithFPS() {      
+function runCodeWithFPS() {
     requestAnimationFrame(runCodeWithFPS);
     
     now = Date.now();
