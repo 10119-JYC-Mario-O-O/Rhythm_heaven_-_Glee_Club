@@ -365,7 +365,7 @@ function setKeyboardListener() {
 
 		if(event.keyCode == 13){
 			if(Start && !Auto){
-				K3_Play_Sound();
+				Play_Sound();
 			}
 
 			Start = false;
@@ -377,7 +377,7 @@ function setKeyboardListener() {
 			}
 			
 			if(is_A_press){
-				K3_Play_Sound();
+				Play_Sound();
 			}
 			
 			if(K3_Sound_State == "Super"){
@@ -459,251 +459,104 @@ function update() {
 	}
 }
 
-function K1_Play_Sound(){
-	if(K1_Sound_State == "D"){
+function Play_Sound(Sound_State){
+	if(Sound_State == "D"){
 		D.play();
 	}
-	if(K1_Sound_State == "C"){
+	if(Sound_State == "C"){
 		C.play();
 	}
-	if(K1_Sound_State == "B"){
+	if(Sound_State == "B"){
 		B.play();
 	}
-	if(K1_Sound_State == "Bp"){
+	if(Sound_State == "Bp"){
 		Bp.play();
 	}
-	if(K1_Sound_State == "A"){
+	if(Sound_State == "A"){
 		A.play();
 	}
-	if(K1_Sound_State == "Ap"){
+	if(Sound_State == "Ap"){
 		Ap.play();
 	}
-	if(K1_Sound_State == "G"){
+	if(Sound_State == "G"){
 		G.play();
 	}
-	if(K1_Sound_State == "Gp"){
+	if(Sound_State == "Gp"){
 		Gp.play();
 	}
-	if(K1_Sound_State == "F"){
+	if(Sound_State == "F"){
 		F.play();
 	}
-	if(K1_Sound_State == "E"){
+	if(Sound_State == "E"){
 		E.play();
 	}
-	if(K1_Sound_State == "Ep"){
+	if(Sound_State == "Ep"){
 		Ep.play();
 	}
-	if(K1_Sound_State == "DD"){
+	if(Sound_State == "DD"){
 		DD.play();
 	}
-	if(K1_Sound_State == "Super"){
+	if(Sound_State == "Super"){
 		C.play();
 		Super_Sound.play();
 	}
 }
 
-function K1_Pause_Sound(){
-	if(K1_Sound_State == "D"){
+function K1_2_Pause_Sound(Sound_State){
+	if(Sound_State == "D"){
 		D.pause();
 		D.currentTime = 0;
 	}
-	if(K1_Sound_State == "C"){
+	if(Sound_State == "C"){
 		C.pause();
 		C.currentTime = 0;
 	}
-	if(K1_Sound_State == "B"){
+	if(Sound_State == "B"){
 		B.pause();
 		B.currentTime = 0;
 	}
-	if(K1_Sound_State == "Bp"){
+	if(Sound_State == "Bp"){
 		Bp.pause();
 		Bp.currentTime = 0;
 	}
-	if(K1_Sound_State == "A"){
+	if(Sound_State == "A"){
 		A.pause();
 		A.currentTime = 0;
 	}
-	if(K1_Sound_State == "Ap"){
+	if(Sound_State == "Ap"){
 		Ap.pause();
 		Ap.currentTime = 0;
 	}
-	if(K1_Sound_State == "G"){
+	if(Sound_State == "G"){
 		G.pause();
 		G.currentTime = 0;
 	}
-	if(K1_Sound_State == "Gp"){
+	if(Sound_State == "Gp"){
 		Gp.pause();
 		Gp.currentTime = 0;
 	}
-	if(K1_Sound_State == "F"){
+	if(Sound_State == "F"){
 		F.pause();
 		F.currentTime = 0;
 	}
-	if(K1_Sound_State == "E"){
+	if(Sound_State == "E"){
 		E.pause();
 		E.currentTime = 0;
 	}
-	if(K1_Sound_State == "Ep"){
+	if(Sound_State == "Ep"){
 		Ep.pause();
 		Ep.currentTime = 0;
 	}
-	if(K1_Sound_State == "DD"){
+	if(Sound_State == "DD"){
 		DD.pause();
 		DD.currentTime = 0;
 	}
-	if(K1_Sound_State == "Super"){
+	if(Sound_State == "Super"){
 		C.pause();
 		C.currentTime = 0;
 	}
 
 	Zip.play();
-}
-
-function K2_Play_Sound(){
-	if(K2_Sound_State == "D"){
-		D.play();
-	}
-	if(K2_Sound_State == "C"){
-		C.play();
-	}
-	if(K2_Sound_State == "B"){
-		B.play();
-	}
-	if(K2_Sound_State == "Bp"){
-		Bp.play();
-	}
-	if(K2_Sound_State == "A"){
-		A.play();
-	}
-	if(K2_Sound_State == "Ap"){
-		Ap.play();
-	}
-	if(K2_Sound_State == "G"){
-		G.play();
-	}
-	if(K2_Sound_State == "Gp"){
-		Gp.play();
-	}
-	if(K2_Sound_State == "F"){
-		F.play();
-	}
-	if(K2_Sound_State == "E"){
-		E.play();
-	}
-	if(K2_Sound_State == "Ep"){
-		Ep.play();
-	}
-	if(K2_Sound_State == "DD"){
-		DD.play();
-	}
-	if(K2_Sound_State == "Super"){
-		C.play();
-		Super_Sound.play();
-	}
-}
-
-function K2_Pause_Sound(){
-	if(K2_Sound_State == "D"){
-		D.pause();
-		D.currentTime = 0;
-	}
-	if(K2_Sound_State == "C"){
-		C.pause();
-		C.currentTime = 0;
-	}
-	if(K2_Sound_State == "B"){
-		B.pause();
-		B.currentTime = 0;
-	}
-	if(K2_Sound_State == "Bp"){
-		Bp.pause();
-		Bp.currentTime = 0;
-	}
-	if(K2_Sound_State == "A"){
-		A.pause();
-		A.currentTime = 0;
-	}
-	if(K2_Sound_State == "Ap"){
-		Ap.pause();
-		Ap.currentTime = 0;
-	}
-	if(K2_Sound_State == "G"){
-		G.pause();
-		G.currentTime = 0;
-	}
-	if(K2_Sound_State == "Gp"){
-		Gp.pause();
-		Gp.currentTime = 0;
-	}
-	if(K2_Sound_State == "F"){
-		F.pause();
-		F.currentTime = 0;
-	}
-	if(K2_Sound_State == "E"){
-		E.pause();
-		E.currentTime = 0;
-	}
-	if(K2_Sound_State == "Ep"){
-		Ep.pause();
-		Ep.currentTime = 0;
-	}
-	if(K2_Sound_State == "DD"){
-		DD.pause();
-		DD.currentTime = 0;
-	}
-	if(K2_Sound_State == "Super"){
-		C.pause();
-		C.currentTime = 0;
-	}
-	
-	Zip.play();
-}
-
-function K3_Play_Sound(){
-	Ap.pause();
-	Ap.currentTime = 0;
-
-	if(K3_Sound_State == "D"){
-		D.play();
-	}
-	if(K3_Sound_State == "C"){
-		C_P.play();
-	}
-	if(K3_Sound_State == "B"){
-		B.play();
-	}
-	if(K3_Sound_State == "Bp"){
-		Bp_P.play();
-	}
-	if(K3_Sound_State == "A"){
-		A.play();
-	}
-	if(K3_Sound_State == "Ap"){
-		Ap.play();
-	}
-	if(K3_Sound_State == "G"){
-		G_P.play();
-	}
-	if(K3_Sound_State == "Gp"){
-		Gp.play();
-	}
-	if(K3_Sound_State == "F"){
-		F.play();
-	}
-	if(K3_Sound_State == "E"){
-		E.play();
-	}
-	if(K3_Sound_State == "Ep"){
-		Ep_P.play();
-	}
-	if(K3_Sound_State == "DD"){
-		DD.play();
-	}
-	if(K3_Sound_State == "Super"){
-		C_P.play();
-		Super_P_Sound.play();
-	}
-	
 }
 
 function K3_Pause_Sound(){
@@ -866,13 +719,13 @@ function Kids_moves(){
 				K1S = "Just";
 			}
 
-			K1_Play_Sound();
+			Play_Sound(K1_Sound_State);
 		}
 	}
 	for(let i = 0; i < K1_Stop.length; i++){
 		if(frame == K1_Stop[i]){
 			K1S = "Idle";
-			K1_Pause_Sound();
+			K1_2_Pause_Sound(K1_Sound_State);
 		}
 	}
 
@@ -886,13 +739,13 @@ function Kids_moves(){
 				K2S = "Just";
 			}
 
-			K2_Play_Sound();
+			Play_Sound(K2_Sound_State);
 		}
 	}
 	for(let i = 0; i < K2_Stop.length; i++){
 		if(frame == K2_Stop[i]){
 			K2S = "Idle";
-			K2_Pause_Sound();
+			K1_2_Pause_Sound(K2_Sound_State);
 		}
 	}
 	
@@ -926,7 +779,7 @@ function Kids_moves(){
 					K3S = "Just";
 				}
 			
-				K3_Play_Sound();
+				Play_Sound(K3_Sound_State);
 			}
 		}
 		for(let i = 0; i < K3_Stop.length; i++){
@@ -966,9 +819,13 @@ function Kids_State(){
 	Count++;
 
 	if(Count >= 5){
-		K1_State();
-		K2_State();
-		K3_State();
+		K1P = K_State(K1S, K1P, K1_Wrong)[0];
+        K1_Wrong &= K_State(K1S, K1P, K1_Wrong)[1];
+
+		K2P = K_State(K2S, K2P, K2_Wrong)[0];
+		K2_Wrong &= K_State(K2S, K2P, K2_Wrong)[1];
+        
+        K3_State();
 		Teacher();
 
 		Count = 0;
@@ -1017,170 +874,80 @@ function Teacher_render(){
 	}
 }
 
-function K1_State(){
-	if(K1S == "Idle"){
-		if(K1P == 0 || K1P == 7 || K1P >= 13){
-			if(!K1_Wrong){
-				K1P = 1;
+function K_State(KS, KP, K_Wrong){
+	if(KS == "Idle"){
+		if(KP == 0 || KP == 7 || KP >= 13){
+			if(!K_Wrong){
+				return [1, true];
 			}else{
-				K1P = 8;
+			    return [8, true];
 			}
-		}else if(K1P == 1 || K1P == 8){
-			if(!K1_Wrong){
-				K1P = 0;
+		}else if(KP == 1 || KP == 8){
+			if(!K_Wrong){
+				return [0, true];
 			}else{
-				K1P = 7;
+				return [7, true];
 			}
-		}else if(K1P == 2){
-			K1P = 1;
-		}else if(K1P == 3){
-			K1P = 2;
-		}else if(K1P == 4 || K1P == 5 || K1P == 6){
-			K1P = 3;
-		}else if(K1P == 10 || K1P == 11 || K1P == 12){
-			K1P = 6;
+		}else if(KP == 2){
+			return [1, true];
+		}else if(KP == 3){
+			return [2, true];
+		}else if(KP == 4 || KP == 5 || KP == 6){
+			return [3, true];
+		}else if(KP == 10 || KP == 11 || KP == 12){
+			return [6, true];
 		}
 	}
 	
-	if(K1S == "Just"){
-		K1_Wrong = false;
-		
-		if(K1P == 0){
-			K1P = 1;
-		}else if(K1P == 1){
-			K1P = 2;
-		}else if(K1P == 2){
-			K1P = 3;
-		}else if(K1P == 3){
-			K1P = 4;
-		}else if(K1P == 4){
-			K1P = 5;
-		}else if(K1P == 5){
-			K1P = 6;
-		}else if(K1P == 6){
-			K1P = 4;
-		}else if(K1P == 7 || K1P == 8 || K1P >= 13){
-			K1P = 0;
+	if(KS == "Just"){		
+		if(KP == 0){
+			return [1, false];
+		}else if(KP == 1){
+			return [2, false];
+		}else if(KP == 2){
+			return [3, false];
+		}else if(KP == 3){
+			return [4, false];
+		}else if(KP == 4){
+			return [5, false];
+		}else if(KP == 5){
+			return [6, false];
+		}else if(KP == 6){
+			return [4, false];
+		}else if(KP == 7 || KP == 8 || KP >= 13){
+			return [0, false];
 		}
 	}
 	
-	if(K1S == "Super"){
-		K1_Wrong = false;
-		
-		if(K1P == 0){
-			K1P = 1;
-		}else if(K1P == 1){
-			K1P = 2;
-		}else if(K1P == 2){
-			K1P = 3;
-		}else if(K1P == 3){
-			K1P = 4;
-		}else if(K1P == 4){
-			K1P = 10;
-		}else if(K1P == 10){
-			K1P = 11;
-		}else if(K1P == 11){
-			K1P = 12;
-		}else if(K1P == 12){
-			K1P = 10;
-		}else if(K1P == 7 || K1P == 8 || K1P >= 13){
-			K1P = 0;
+	if(KS == "Super"){		
+		if(KP == 0){
+			return [1, false];
+		}else if(KP == 1){
+			return [2, false];
+		}else if(KP == 2){
+			return [3, false];
+		}else if(KP == 3){
+			return [4, false];
+		}else if(KP == 4){
+			return [10, false];
+		}else if(KP == 10){
+			return [11, false];
+		}else if(KP == 11){
+			return [12, false];
+		}else if(KP == 12){
+			return [10, false];
+		}else if(KP == 7 || KP == 8 || KP >= 13){
+			return [0, false];
 		}
 	}
 
-	if(K1S == "Super_Ready"){
-		K1_Wrong = false;
-		
-		if(K1P <= 12 || K1P == 15){
-			K1P = 13;
-		}else if(K1P == 13){
-			K1P = 14;
-		}else if(K1P == 14){
-			K1P = 15;
-		}
-	}
-}
-
-function K2_State(){
-	if(K2S == "Idle"){
-		if(K2P == 0 || K2P == 7 || K2P >= 13){
-			if(!K2_Wrong){
-				K2P = 1;
-			}else{
-				K2P = 8;
-			}
-		}else if(K2P == 1 || K2P == 8){
-			if(!K2_Wrong){
-				K2P = 0;
-			}else{
-				K2P = 7;
-			}
-		}else if(K2P == 2){
-			K2P = 1;
-		}else if(K2P == 3){
-			K2P = 2;
-		}else if(K2P == 4 || K2P == 5 || K2P == 6){
-			K2P = 3;
-		}else if(K2P == 10 || K2P == 11 || K2P == 12){
-			K2P = 6;
-		}
-	}
-	
-	if(K2S == "Just"){
-		K2_Wrong = false;
-		
-		if(K2P == 0){
-			K2P = 1;
-		}else if(K2P == 1){
-			K2P = 2;
-		}else if(K2P == 2){
-			K2P = 3;
-		}else if(K2P == 3){
-			K2P = 4;
-		}else if(K2P == 4){
-			K2P = 5;
-		}else if(K2P == 5){
-			K2P = 6;
-		}else if(K2P == 6){
-			K2P = 4;
-		}else if(K2P == 7 || K2P == 8 || K2P >= 13){
-			K2P = 0;
-		}
-	}
-	
-	if(K2S == "Super"){
-		K2_Wrong = false;
-		
-		if(K2P == 0){
-			K2P = 1;
-		}else if(K2P == 1){
-			K2P = 2;
-		}else if(K2P == 2){
-			K2P = 3;
-		}else if(K2P == 3){
-			K2P = 4;
-		}else if(K2P == 4){
-			K2P = 10;
-		}else if(K2P == 10){
-			K2P = 11;
-		}else if(K2P == 11){
-			K2P = 12;
-		}else if(K2P == 12){
-			K2P = 10;
-		}else if(K2P == 7 || K2P == 8 || K2P >= 13){
-			K2P = 0;
-		}
-	}
-	
-	if(K2S == "Super_Ready"){
-		K2_Wrong = false;
-		
-		if(K2P <= 12 || K2P == 15){
-			K2P = 13;
-		}else if(K2P == 13){
-			K2P = 14;
-		}else if(K2P == 14){
-			K2P = 15;
+	if(KS == "Super_Ready"){		
+		if(KP <= 12 || KP == 15){
+			return [13, false];
+		}else if(KP == 13){
+			return [14, false];
+		}else if(KP == 14){
+			return [15, false];
 		}
 	}
 }
@@ -1251,141 +1018,51 @@ function K3_State(){
 	}
 }
 
-function Kid1() {
-	if(K1P == 0){
-		ctx.drawImage(Idle1, K1X, K1Y);
+function Kid(KP, KX, KY) {
+	if(KP == 0){
+		ctx.drawImage(Idle1, KX, KY);
 	}
-	if(K1P == 1){
-		ctx.drawImage(Idle2, K1X, K1Y);
+	if(KP == 1){
+		ctx.drawImage(Idle2, KX, KY);
 	}
-	if(K1P == 2){
-		ctx.drawImage(Just1, K1X, K1Y - 4);
+	if(KP == 2){
+		ctx.drawImage(Just1, KX, KY - 4);
 	}
-	if(K1P == 3){
-		ctx.drawImage(Just2, K1X, K1Y - 8);
+	if(KP == 3){
+		ctx.drawImage(Just2, KX, KY - 8);
 	}
-	if(K1P == 4){
-		ctx.drawImage(Just3, K1X, K1Y - 6);
+	if(KP == 4){
+		ctx.drawImage(Just3, KX, KY - 6);
 	}
-	if(K1P == 5){
-		ctx.drawImage(Just4, K1X, K1Y - 6);
+	if(KP == 5){
+		ctx.drawImage(Just4, KX, KY - 6);
 	}
-	if(K1P == 6){
-		ctx.drawImage(Just5, K1X, K1Y - 6);
+	if(KP == 6){
+		ctx.drawImage(Just5, KX, KY - 6);
 	}
-	if(K1P == 7){
-		ctx.drawImage(Sad1, K1X, K1Y);
+	if(KP == 7){
+		ctx.drawImage(Sad1, KX, KY);
 	}
-	if(K1P == 8){
-		ctx.drawImage(Sad2, K1X - 3, K1Y - 3);
+	if(KP == 8){
+		ctx.drawImage(Sad2, KX - 3, KY - 3);
 	}
-	if(K1P == 10){
-		ctx.drawImage(Super1, K1X, K1Y - 32);
+	if(KP == 10){
+		ctx.drawImage(Super1, KX, KY - 32);
 	}
-	if(K1P == 11){
-		ctx.drawImage(Super2, K1X, K1Y - 32);
+	if(KP == 11){
+		ctx.drawImage(Super2, KX, KY - 32);
 	}
-	if(K1P == 12){
-		ctx.drawImage(Super3, K1X, K1Y - 32);
+	if(KP == 12){
+		ctx.drawImage(Super3, KX, KY - 32);
 	}
-	if(K1P == 13){
-		ctx.drawImage(SuperReady, K1X, K1Y + 24);
+	if(KP == 13){
+		ctx.drawImage(SuperReady, KX, KY + 24);
 	}
-	if(K1P == 14){
-		ctx.drawImage(SuperReady, K1X, K1Y + 30);
+	if(KP == 14){
+		ctx.drawImage(SuperReady, KX, KY + 30);
 	}
-	if(K1P == 15){
-		ctx.drawImage(SuperReady, K1X + 6, K1Y + 24);
-	}
-}
-
-function Kid2() {
-	if(K2P == 0){
-		ctx.drawImage(Idle1, K2X, K2Y);
-	}
-	if(K2P == 1){
-		ctx.drawImage(Idle2, K2X, K2Y);
-	}
-	if(K2P == 2){
-		ctx.drawImage(Just1, K2X, K2Y - 4);
-	}
-	if(K2P == 3){
-		ctx.drawImage(Just2, K2X, K2Y - 8);
-	}
-	if(K2P == 4){
-		ctx.drawImage(Just3, K2X, K2Y - 6);
-	}
-	if(K2P == 5){
-		ctx.drawImage(Just4, K2X, K2Y - 6);
-	}
-	if(K2P == 6){
-		ctx.drawImage(Just5, K2X, K2Y - 6);
-	}
-	if(K2P == 7){
-		ctx.drawImage(Sad1, K2X, K2Y);
-	}
-	if(K2P == 8){
-		ctx.drawImage(Sad2, K2X - 3, K2Y - 3);
-	}
-	if(K2P == 10){
-		ctx.drawImage(Super1, K2X, K2Y - 32);
-	}
-	if(K2P == 11){
-		ctx.drawImage(Super2, K2X, K2Y - 32);
-	}
-	if(K2P == 12){
-		ctx.drawImage(Super3, K2X, K2Y - 32);
-	}
-	if(K2P == 13){
-		ctx.drawImage(SuperReady, K2X, K2Y + 24);
-	}
-	if(K2P == 14){
-		ctx.drawImage(SuperReady, K2X, K2Y + 30);
-	}
-	if(K2P == 15){
-		ctx.drawImage(SuperReady, K2X + 6, K2Y + 24);
-	}
-}
-
-function Kid3() {
-	if(K3P == 0){
-		ctx.drawImage(Idle1, K3X, K3Y);
-	}
-	if(K3P == 1){
-		ctx.drawImage(Idle2, K3X, K3Y);
-	}
-	if(K3P == 2){
-		ctx.drawImage(Just1, K3X, K3Y - 4);
-	}
-	if(K3P == 3){
-		ctx.drawImage(Just2, K3X, K3Y - 8);
-	}
-	if(K3P == 4){
-		ctx.drawImage(Just3, K3X, K3Y - 6);
-	}
-	if(K3P == 5){
-		ctx.drawImage(Just4, K3X, K3Y - 6);
-	}
-	if(K3P == 6){
-		ctx.drawImage(Just5, K3X, K3Y - 6);
-	}
-	if(K3P == 10){
-		ctx.drawImage(Super1, K3X, K3Y - 32);
-	}
-	if(K3P == 11){
-		ctx.drawImage(Super2, K3X, K3Y - 32);
-	}
-	if(K3P == 12){
-		ctx.drawImage(Super3, K3X, K3Y - 32);
-	}
-	if(K3P == 13){
-		ctx.drawImage(SuperReady, K3X, K3Y + 24);
-	}
-	if(K3P == 14){
-		ctx.drawImage(SuperReady, K3X, K3Y + 30);
-	}
-	if(K3P == 15){
-		ctx.drawImage(SuperReady, K3X + 6, K3Y + 24);
+	if(KP == 15){
+		ctx.drawImage(SuperReady, KX + 6, KY + 24);
 	}
 }
 		
@@ -1393,9 +1070,10 @@ function render() {
 	Kids_moves();
 	Kids_State();
 
-	Kid1();
-	Kid2();
-	Kid3();
+	Kid(K1P, K1X, K1Y);
+    Kid(K2P, K2X, K2Y);
+    Kid(K3P, K3X, K3Y);
+
 	Teacher_render();
 
 	Set_score();
@@ -1891,7 +1569,7 @@ loadAudio();
 loadImage();
 setKeyboardListener();
 
-function runCodeWithFPS () {      
+function runCodeWithFPS() {      
     requestAnimationFrame(runCodeWithFPS);
     
     now = Date.now();
